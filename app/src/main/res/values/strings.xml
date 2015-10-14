@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BoreWeibo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="weibosdk_toast_auth_success">auth_success</string>
+    <string name="weibosdk_toast_auth_failed">auth_fail</string>
+    <string name="weibosdk_toast_auth_canceled">auth_cancel</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_status_detail">StatusDetailActivity</string>
+    <string name="title_activity_write_comment">WriteCommentActivity</string>
+    <string name="title_activity_write_status">WriteStatusActivity</string>
+    <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="title_activity_image_browser">ImageBrowserActivity</string>
+</resources>

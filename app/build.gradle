@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.ultarpower.boreweibo"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        myConfig {
+            storeFile file("weibo.jks")
+            storePassword "lz854434716"
+            keyAlias "weibo"
+            keyPassword "lz854434716"//将这里的“**”替换成自己的信息
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig  signingConfigs.myConfig//不要忘了要在release的时候加入我么的签名配置信息
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    compile project(':weiboSDK')
+    compile project(':pulltorefresh')
+}
